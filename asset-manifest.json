@@ -1,0 +1,15 @@
+{
+  "main.css": "/ffxiv-market-watch/static/css/main.3e373cae.chunk.css",
+  "main.js": "/ffxiv-market-watch/static/js/main.4ae900c0.chunk.js",
+  "main.js.map": "/ffxiv-market-watch/static/js/main.4ae900c0.chunk.js.map",
+  "runtime~main.js": "/ffxiv-market-watch/static/js/runtime~main.38d6dc88.js",
+  "runtime~main.js.map": "/ffxiv-market-watch/static/js/runtime~main.38d6dc88.js.map",
+  "static/js/2.2e795f6c.chunk.js": "/ffxiv-market-watch/static/js/2.2e795f6c.chunk.js",
+  "static/js/2.2e795f6c.chunk.js.map": "/ffxiv-market-watch/static/js/2.2e795f6c.chunk.js.map",
+  "index.html": "/ffxiv-market-watch/index.html",
+  "precache-manifest.e01a77c61f6b09fc225d9314670ad6c7.js": "/ffxiv-market-watch/precache-manifest.e01a77c61f6b09fc225d9314670ad6c7.js",
+  "service-worker.js": "/ffxiv-market-watch/service-worker.js",
+  "static/css/main.3e373cae.chunk.css.map": "/ffxiv-market-watch/static/css/main.3e373cae.chunk.css.map",
+  "static/media/finalf.ttf": "/ffxiv-market-watch/static/media/finalf.e8e60fea.ttf",
+  "static/media/mario-coin.wav": "/ffxiv-market-watch/static/media/mario-coin.8e3ab67b.wav"
+}
