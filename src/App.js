@@ -7,13 +7,7 @@ import FinalFontasy from "./data/finalf.ttf";
 
 class App extends Component {
   state = {
-    items: [
-      23769, // knuckles
-      23770, // axe
-      23771, // lance
-      23774, // odachi
-      23781 // katana
-    ],
+    items: [],
     counter: 0,
     itemInfo: [],
     userName: "",
@@ -139,8 +133,8 @@ class App extends Component {
         <h4 className="instructions">Instructions</h4>
         <p style={{ textAlign: "center" }}>
           Enter your character name to be notified when someone undercuts you.
-          <br /> To add items enter the item ID <code>23788</code>. To remove
-          items put a '-' before the id <code>-23788</code>
+          <br /> To add items enter the item ID <code>"23788"</code>. To remove
+          items put a '-' before the id <code>"-23788"</code>
         </p>
         <div className="items">
           {this.state.items.length &&
