@@ -3,12 +3,12 @@ import { Card, ListGroup } from "react-bootstrap";
 import soundFile from "../data/mario-coin.wav";
 
 export default function Item({ info, name, competitor, userName, muted }) {
-  const lister = info.CraftSignature;
+  const lister = info.CraftSignature.toLowerCase();
   const price = info.PricePerUnit;
   const secondPrice = competitor.PricePerUnit;
   const alert = new Audio(soundFile);
 
-  if (userName !== lister && !muted) {
+  if (userName.toLowerCase() !== lister && !muted) {
     alert.play();
   }
 
@@ -22,7 +22,7 @@ export default function Item({ info, name, competitor, userName, muted }) {
         <ListGroup>
           <ListGroup.Item
             style={
-              userName !== lister
+              userName.toLowerCase() !== lister
                 ? { backgroundColor: "red" }
                 : { backgroundColor: "#7289DA" }
             }
