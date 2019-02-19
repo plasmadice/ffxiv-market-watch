@@ -2,7 +2,6 @@
   "name": "ffxiv-market-watch",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://plasmadice.github.io/ffxiv-market-watch",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
