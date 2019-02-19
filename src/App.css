@@ -11,7 +11,7 @@ html,
   flex-direction: column;
   align-content: center;
   align-items: center;
-  padding-top: 20vh;
+  padding-top: 10vh;
 }
 
 .items {
@@ -22,10 +22,21 @@ html,
 }
 
 .mute-button {
-  align-self: flex-start;
-  margin-left: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 20px;
 }
 
 code {
   margin-top: 5px;
+}
+
+.headline {
+  margin: 70px 0;
+}
+
+.instructions,
+.input-form {
+  margin: 10px 0;
 }

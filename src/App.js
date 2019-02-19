@@ -3,6 +3,7 @@ import axios from "axios";
 import "./App.css";
 import Item from "./components/Item";
 import { Button, Col, Form } from "react-bootstrap";
+import FinalFontasy from "./data/finalf.ttf";
 
 class App extends Component {
   state = {
@@ -75,7 +76,7 @@ class App extends Component {
           return { counter: this.state.counter + 1 };
         });
       }
-    }, 1000);
+    }, 330);
   };
 
   getPrices = item => {
@@ -100,13 +101,12 @@ class App extends Component {
         <Button
           className="mute-button"
           onClick={this.handleMute}
-          variant={!this.state.muted ? "success" : "danger"}
+          variant={this.state.muted ? "danger" : "success"}
         >
-          {!this.state.muted ? "Unmute" : "Mute"}
+          {this.state.muted ? "Unmute" : "Mute"}
         </Button>
-        <h1>FFXIV Item Watcher</h1>
-        <h3 />
-        <Form onSubmit={this.handleSubmit}>
+        <h1 className="headline">FFXIV Item Watcher</h1>
+        <Form onSubmit={this.handleSubmit} className="input-form">
           <Form.Row>
             <Col>
               <Form.Control
@@ -136,7 +136,7 @@ class App extends Component {
             Loading items... If this takes too long you entered a bad item ID
           </code>
         )}
-        <h4>Instructions</h4>
+        <h4 className="instructions">Instructions</h4>
         <p style={{ textAlign: "center" }}>
           Enter your character name to be notified when someone undercuts you.
           <br /> To add items enter the item ID <code>23788</code>. To remove
