@@ -19,7 +19,7 @@ export default function Item({ first, name, second, third, userName, muted }) {
     bad: {
       width: "22rem",
       margin: "10px",
-      backgroundColor: "orange"
+      backgroundColor: "#dc3545"
     }
   };
 
