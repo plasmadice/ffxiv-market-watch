@@ -23,10 +23,10 @@ class App extends Component {
       );
 
       this.setState({
-        muted,
-        items,
-        userName,
-        server
+        muted: muted,
+        items: items,
+        userName: userName,
+        server: server
       });
     }
 
@@ -95,6 +95,15 @@ class App extends Component {
     this.setState((prevState, props) => {
       return { muted: !prevState.muted };
     });
+
+    const local = {
+      muted: !this.state.muted,
+      items: this.state.items,
+      userName: this.state.userName,
+      server: this.state.server
+    };
+
+    localStorage.setItem("FFXIVMarket", JSON.stringify(local));
   };
 
   onServerChange = event => {
@@ -213,6 +222,8 @@ class App extends Component {
                     muted={this.state.muted}
                   />
                 );
+              } else {
+                return null;
               }
             })}
         </div>
