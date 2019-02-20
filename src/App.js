@@ -127,7 +127,16 @@ class App extends Component {
           this.setState({ itemInfo: itemInfo });
         }
       })
-      .catch(error => console.log("You broke something", error));
+      .catch(error => {
+        console.log("Probably bad item ID", error);
+
+        this.setState({
+          items: this.state.items.filter(itemID => {
+            // eslint-disable-next-line
+            return itemID !== item;
+          })
+        });
+      });
   };
 
   render() {
