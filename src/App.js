@@ -148,8 +148,9 @@ class App extends Component {
                   userName={this.state.userName}
                   key={item.Prices[0].ID + Math.random()}
                   name={item.Item.Name}
-                  info={cheapestItem[0]}
-                  competitor={cheapestItem[1]}
+                  first={cheapestItem[0]}
+                  second={cheapestItem[1]}
+                  third={cheapestItem[2]}
                   muted={this.state.muted}
                 />
               );
