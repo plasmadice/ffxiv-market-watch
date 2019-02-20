@@ -23,10 +23,6 @@ export default function Item({ first, name, second, third, userName, muted }) {
     }
   };
 
-  console.log(first);
-  console.log(second);
-  console.log(third);
-
   return (
     <Card
       style={
@@ -40,6 +36,9 @@ export default function Item({ first, name, second, third, userName, muted }) {
         <Card.Subtitle className="mb-2 text-muted">
           Order / Name / Retainer
         </Card.Subtitle>
+        <Card.Header style={{ backgroundColor: "#33393e" }}>
+          Current Lowest Price: {first.PricePerUnit}
+        </Card.Header>
         <ListGroup>
           <ListGroup.Item
             style={
