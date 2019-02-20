@@ -3,7 +3,6 @@ import axios from "axios";
 import "./App.css";
 import Item from "./components/Item";
 import { Button, Col, Form } from "react-bootstrap";
-import FinalFontasy from "./data/finalf.ttf";
 import servers from "./data/servers";
 
 class App extends Component {

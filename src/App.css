@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "FINAL FANTASY";
+  src: url("./data/finalf.ttf") format("ttf");
+}
+
 html,
 #root,
 .main-container {
@@ -33,6 +38,7 @@ code {
 }
 
 .headline {
+  font-family: "FINAL FANTASY";
   margin: 70px 0;
 }
 
