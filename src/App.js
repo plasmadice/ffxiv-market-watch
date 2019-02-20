@@ -4,6 +4,7 @@ import "./App.css";
 import Item from "./components/Item";
 import { Button, Col, Form } from "react-bootstrap";
 import FinalFontasy from "./data/finalf.ttf";
+import servers from "./data/servers";
 
 class App extends Component {
   state = {
@@ -12,7 +13,8 @@ class App extends Component {
     itemInfo: [],
     userName: "",
     itemField: "",
-    muted: false
+    muted: false,
+    server: "excalibur"
   };
 
   componentDidMount = () => {
@@ -61,6 +63,10 @@ class App extends Component {
     });
   };
 
+  onServerChange = event => {
+    this.setState({ server: event.target.value.toLowerCase() });
+  };
+
   staggerCalls = () => {
     setInterval(() => {
       if (this.state.items.length > 0) {
@@ -77,9 +83,10 @@ class App extends Component {
     const itemInfo = this.state.itemInfo;
     const url = "https://xivapi.com";
     const key = "d8e0653f39804f04aa69ab6a";
+    const server = this.state.server;
 
     axios
-      .get(`${url}/market/excalibur/items/${item}?key=${key}`)
+      .get(`${url}/market/${server}/items/${item}?key=${key}`)
       .then(res => {
         if (res.status === 200) {
           itemInfo[this.state.counter] = res.data;
@@ -109,6 +116,14 @@ class App extends Component {
                 value={this.state.userName}
                 placeholder="Character Name"
               />
+            </Col>
+            <Col>
+              <Form.Control as="select" onChange={this.onServerChange}>
+                <option>Server</option>
+                {servers.map(server => {
+                  return <option key={server}>{server}</option>;
+                })}
+              </Form.Control>
             </Col>
             <Col>
               <Form.Control
