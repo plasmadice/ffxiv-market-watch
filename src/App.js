@@ -17,6 +17,19 @@ class App extends Component {
   };
 
   componentDidMount = () => {
+    if (localStorage.FFXIVMarket !== undefined) {
+      const { muted, items, userName, server } = JSON.parse(
+        localStorage.getItem("FFXIVMarket")
+      );
+
+      this.setState({
+        muted,
+        items,
+        userName,
+        server
+      });
+    }
+
     this.staggerCalls();
   };
 
@@ -30,6 +43,8 @@ class App extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+
+    // removal
     if (this.state.itemField.startsWith("-")) {
       const newItems = this.state.items.filter(item => {
         // eslint-disable-next-line
@@ -41,10 +56,29 @@ class App extends Component {
         return item.Item.ID != this.state.itemField.slice(1);
       });
 
+      const local = {
+        muted: this.state.muted,
+        items: newItems,
+        userName: this.state.userName,
+        server: this.state.server
+      };
+
+      localStorage.setItem("FFXIVMarket", JSON.stringify(local));
+
       this.setState({ items: newItems, itemInfo: newItemInfo, itemField: "" });
     } else {
+      // addition
       const oldItems = this.state.items;
       oldItems.push(Number(this.state.itemField));
+
+      const local = {
+        muted: this.state.muted,
+        items: this.state.items,
+        userName: this.state.userName,
+        server: this.state.server
+      };
+
+      localStorage.setItem("FFXIVMarket", JSON.stringify(local));
       this.setState({ itemField: "" });
     }
   };
