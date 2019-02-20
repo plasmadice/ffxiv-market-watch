@@ -42,10 +42,11 @@ class App extends Component {
         return item.Item.ID != this.state.itemField.slice(1);
       });
 
-      this.setState({ items: newItems, itemInfo: newItemInfo });
+      this.setState({ items: newItems, itemInfo: newItemInfo, itemField: "" });
     } else {
       const oldItems = this.state.items;
       oldItems.push(Number(this.state.itemField));
+      this.setState({ itemField: "" });
     }
   };
 
