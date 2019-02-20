@@ -192,17 +192,19 @@ class App extends Component {
                 return a.PricePerUnit - b.PricePerUnit;
               });
 
-              return (
-                <Item
-                  userName={this.state.userName}
-                  key={item.Prices[0].ID + Math.random()}
-                  name={item.Item.Name}
-                  first={cheapestItem[0]}
-                  second={cheapestItem[1]}
-                  third={cheapestItem[2]}
-                  muted={this.state.muted}
-                />
-              );
+              if (item.Prices[0] !== undefined) {
+                return (
+                  <Item
+                    userName={this.state.userName}
+                    key={item.Prices[0].ID + Math.random()}
+                    name={item.Item.Name}
+                    first={cheapestItem[0]}
+                    second={cheapestItem[1]}
+                    third={cheapestItem[2]}
+                    muted={this.state.muted}
+                  />
+                );
+              }
             })}
         </div>
       </div>
