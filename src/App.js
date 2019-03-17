@@ -199,7 +199,11 @@ class App extends Component {
         )}
         <h4 className="instructions">Instructions</h4>
         <p style={{ textAlign: "center" }}>
-          Enter your character name to be notified when someone undercuts you.
+          Right now the API does not work, next update will be for when the API
+          is available. If you notice that it is available before I do please
+          email me at phoenixquint@gmail.com. Also: api has been reduced to 2
+          requests/second. Enter your character name to be notified when someone
+          undercuts you.
           <br /> To add items enter the item ID <code>"23788"</code>. To remove
           items put a '-' before the id <code>"-23788"</code>
         </p>
