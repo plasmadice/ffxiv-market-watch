@@ -119,13 +119,13 @@ class App extends Component {
           return { counter: this.state.counter + 1 };
         });
       }
-    }, 330);
+    }, 501);
   };
 
   getPrices = item => {
     const itemInfo = this.state.itemInfo;
     const url = "https://xivapi.com";
-    const key = "d8e0653f39804f04aa69ab6a";
+    const key = "eb342637229c4ece8bc00ff9";
     const server = this.state.server;
 
     axios
